@@ -1,0 +1,4 @@
+streamlit
+pandas
+ibm-watson-machine-learning
+ibm-cloud-sdk-core
