@@ -165,6 +165,7 @@ with col_agent:
                     
                     st.session_state.messages.append({"role": "assistant", "content": error_msg})
                     log_transaction(prompt, "BLOCKED", risk)
+                    st.rerun()
                     
                 else:
                     # APPROVED PATH
@@ -179,6 +180,7 @@ with col_agent:
                     st.markdown(agent_reply)
                     
                     log_transaction(prompt, "APPROVED", None)
+                    st.rerun()
 
 # --- RIGHT COLUMN: FORENSICS LEDGER ---
 with col_audit:
